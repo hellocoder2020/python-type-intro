@@ -1,7 +1,7 @@
 FROM python:3.8-alpine
 
 WORKDIR /usr/src/app
-ADD /usr/src/app/requirements.txt .
+ADD ./app/requirements.txt /usr/src/app/
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt 
 
