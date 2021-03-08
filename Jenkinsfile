@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
+                sh 'sh stopUvicorn.sh'
                 sh 'JENKINS_NODE_COOKIE=dontKillMe nohup uvicorn app.main:app --host 165.232.162.119 &'
             }
         }
