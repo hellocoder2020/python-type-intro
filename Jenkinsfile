@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Deployment') {
             steps {
-                sh 'sudo docker-compose build'
-                sh 'sudo docker-compose up -d'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe nohup uvicorn app.main:app --host 165.232.162.119 &'
             }
         }
         stage('Test') {
