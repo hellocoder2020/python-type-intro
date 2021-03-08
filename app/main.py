@@ -5,4 +5,4 @@ app = FastAPI()
 
 @app.get("/")
 async def hello_coder():
-    return {"message": "Hello Coder, CICD with Jenkin Tool is succeeded"}
+    return {"message": "Hello Coder Fan ^^"}
